@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Electrohormonix';
+  src: url('/fonts/electroharmonix.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'joystix';
+  src: url('/fonts/joystix monospace.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+button,
+textarea,
+input,
+select,
+nav .fas,
+a {
+-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+-webkit-tap-highlight-color: transparent;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+html::-webkit-scrollbar {
+display: none; /* Chrome, Safari, Opera */
+}
+/* For Chrome, Safari, and newer versions of Edge */
+body {
+overflow-y: scroll !important;
+}
+
+body::-webkit-scrollbar {
+display: none !important; /* Hides scrollbar */
+}
+
+/* For Firefox */
+body {
+scrollbar-width: none !important; /* Firefox-specific */
+}
+:root {
+--primary-color: #00b5e2;
+--secondary-color: #00629b;
+--dark-bg: #060606;
+--dark-bright-bg: #1a1a1a;
+--hero-font: 'Doto';
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: var(--dark-bg);
+color: #ffffff;
+}
+
+.logo {
+  color: #00b5e2;
+}
+
+h2 {
+  font-size: 32px;
+  color: white;
+}

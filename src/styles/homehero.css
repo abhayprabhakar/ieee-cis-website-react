@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #00b5e2;
+    --secondary-color: #00629b;
+    --dark-bg: #060606;
+    --dark-bright-bg: #101010;
+    --dark-bright-bg-nav: rgba(16, 16, 16, 0.9);
+    --hero-font: "Doto";
+    --padding-card: 16px;
+}
+/* Hero Section */
+.hero {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background: #060606;
+    flex-wrap: nowrap;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    align-self:center;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content h1 {
+    /* font-family: "Smooch Sans", serif; */
+    font-family: var(--hero-font);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#home-h1-humanity {
+    font-family: var(--hero-font);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: #00b5e2;
+}
+
+.hero-content {
+    opacity: 0;
+    animation: none
+        /* showContent 1s 0s ease-in-out forwards */
+    ;
+}
+
+#hero-content-h1 {
+    opacity: 0;
+    animation: none
+        /* showContent 1s 0.4s ease-in-out forwards */
+    ;
+}
+
+#home-h1-humanity {
+    opacity: 0;
+    content: "Humanity";
+    animation: none
+        /* showContent 1.2s 0.7s ease-in-out forwards */
+    ;
+}
+
+@keyframes showContent {
+    from {
+        transform: translateY(10px);
+        filter: blur(2px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes changeColor {
+    from {
+        color: red;
+    }
+
+    to {
+        color: #00b5e2;
+    }
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    /* Rounder Buttons */
+    transition: 0.3s ease-in-out;
+    cursor:pointer
+}
+
+.button {
+    padding: 12px 24px;
+    margin-top: 20px;
+    background: #00629b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    /* Rounder Buttons */
+    transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* First button */
+.btn:first-child {
+    background: #00629b;
+    /* Blue color */
+}
+
+/* Second button */
+.btn:last-child {
+    background: #00b5e2;
+    /* Light blue */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    color: #fff;
+}

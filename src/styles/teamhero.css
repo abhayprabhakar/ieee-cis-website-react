@@ -1,0 +1,48 @@
+#hero {
+  position: relative;
+  height: 100vh;
+}
+
+#hero-title {
+  position: absolute;
+  transform: translate(-50%, 60%);
+  top: 40%;
+  z-index: 99999;
+  left: 50%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #603F26;
+  font-family: 'Poppins', sans-serif;
+}
+
+#hero-title-1 {
+  opacity: 0;
+  transform: translate(-50%, 60%);
+  animation : showContent 1s 0s ease-in-out forwards;
+}
+
+#hero-title-2 {
+  opacity: 0;
+  transform: translate(-50%, 60%);
+  animation: showContent 1s 0.5s ease-in-out forwards;
+}
+
+#hero-title-3 {
+  opacity: 0;
+  transform: translate(-50%, 60%);
+  animation: showContent 1s 1s ease-in-out forwards;
+}
+
+@keyframes showContent {
+  from {
+    transform: translate(-50%, 60%);
+    filter: blur(2px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+    filter: blur(0);
+  }
+}

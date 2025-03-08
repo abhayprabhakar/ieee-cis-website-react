@@ -1,0 +1,238 @@
+h2 {
+  font-size: 32px;
+  color: white;
+}
+:root {
+  --primary-color: #00b5e2;
+  --secondary-color: #00629b;
+  --dark-bg: #060606;
+  --dark-bright-bg: #1a1a1a;
+  /* --dark-bright-bg: rgba(50, 50, 50, 0.9); */
+  --hero-font: 'Doto';
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn{
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px; /* Rounder Buttons */
+  transition: 0.3s ease-in-out;
+}
+
+.button {
+  padding: 12px 24px;
+  margin-top: 20px;
+  background: #00629b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px; /* Rounder Buttons */
+  transition: 0.3s ease-in-out;
+}
+.button:hover {
+  color: #fff;
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* First button */
+.btn:first-child{
+  background: #00629b; /* Blue color */
+}
+
+/* Second button */
+.btn:last-child {
+  background: #00b5e2; /* Light blue */
+}
+
+/* Button Hover Effect */
+.btn:hover{
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Overview Section */
+.overview-section {
+  background-color: var(--dark-bg);
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60ch;
+  padding: 1rem;
+}
+
+.text-content {
+  font: 1rem;
+  color:#f1f1f1;
+  padding-top: 1rem;
+}
+
+.text-content-h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #f1f1f1;
+  line-height: 2;
+}
+
+#join-us{
+  margin-bottom: 2rem;
+}
+
+.upcoming-events{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  gap: 2rem;
+  margin-bottom: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.event-card {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  font-family: 'Poppins', Arial;
+  text-align: left;
+  border: 2px solid #222;
+    width: 330px;
+    height: 420px;
+    border-radius: 30px;
+    background: var(--dark-bright-bg);
+  transition: transform 0.3s;
+  transition: all 0.3s;
+}
+
+.event-card::after {
+  content: "";
+  position: absolute;
+  inset:0;
+  padding: 3px;
+  background: linear-gradient(to bottom, var(--primary-color), #00629b);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.event-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.event-type {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.4rem;
+  padding-left: var(--padding-card);
+  padding-right: var(--padding-card);
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.4rem;
+  padding-left: var(--padding-card);
+  padding-right: var(--padding-card);
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0rem;
+  padding-left: var(--padding-card);
+  padding-right: var(--padding-card);
+}
+
+.event-description {
+  font-size: 1rem;
+  padding: var(--padding-card);
+  color: #AAA;
+}
+
+/* Image Section */
+.image-content {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      text-align: center;
+  }
+  .text-content, .image-content {
+      max-width: 100%;
+  }
+  .text-content-h2 {
+    order: 1;
+  }
+  .text-content {
+      padding-bottom: 20px;
+      order: 3;
+  }
+  .image-content {
+      order: 2;
+  }
+}
+
+.footer{
+  background-color: var(--dark-bright-bg);
+}
