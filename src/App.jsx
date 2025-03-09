@@ -15,12 +15,16 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulating content load delay
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500); // Adjust time as needed
+    const handleLoad = () => setLoading(false);
 
-    return () => clearTimeout(timer);
+    // Wait until fonts and images are loaded
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return (
