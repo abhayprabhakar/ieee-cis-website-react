@@ -54,12 +54,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--dark-bg);
-  color: #ffffff;
-}
 
 nav, footer {
   opacity: 0;

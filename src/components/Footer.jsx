@@ -1,6 +1,14 @@
 import "../styles/footer.css";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import {
+  faInstagram,
+  faLinkedin,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   const location = useLocation(); // Get current route
@@ -93,25 +101,41 @@ const Footer = () => {
           <h4 className="footer-title">Contact Us</h4>
           <div className="footer-contact">
             <div className="footer-contact-item">
-              <i className="fas fa-phone footer-contact-icon"></i>
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="footer-contact-icon"
+                size="1x"
+              />
               <a href="tel:+91234234213" className="footer-link">
                 Umashankar S
               </a>
             </div>
             <div className="footer-contact-item">
-              <i className="fas fa-phone footer-contact-icon"></i>
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="footer-contact-icon"
+                size="1x"
+              />
               <a href="tel:+91123412342" className="footer-link">
                 Vishnu Kashyap D
               </a>
             </div>
             <div className="footer-contact-item">
-              <i className="fas fa-phone footer-contact-icon"></i>
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="footer-contact-icon"
+                size="1x"
+              />
               <a href="tel:+919148267350" className="footer-link">
                 Abhay Prabhakar
               </a>
             </div>
             <div className="footer-contact-item">
-              <i className="fas fa-phone footer-contact-icon"></i>
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="footer-contact-icon"
+                size="1x"
+              />
               <a href="tel:+919332412312" className="footer-link">
                 Soumyadeep Ghosh
               </a>
